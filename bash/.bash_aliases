@@ -3,27 +3,25 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --hyperlink=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias cfgbash='$EDITOR ~/.bashrc'
-alias cfgi3='$EDITOR ~/.config/i3/config'
-alias cfgalias='$EDITOR ~/.bash_aliases && source ~/.bash_aliases
+alias cfgalias='$EDITOR ~/.bash_aliases && source ~/.bash_aliases'
 
 ## vim stuff
 alias svim="sudo vim"
-alias n="nvim"
+alias n="vim"
 alias v="vim"
 
 # bookmark-like aliases
 alias cddot='cd ~/dot'
 
-
 # commit -a, damit auch gelöschte Dateien erfasst und committed werden.
-alias gittp='git add *; git commit -a -m "fridoxps $(date +%a-%d-%b-%y-%H:%M:%S)"; git push'
-alias gitt='git add *; git commit -a -m "fridoxps $(date +%a-%d-%b-%y-%H:%M:%S)"'
+alias gittp='git add *; git commit -a -m "$HOSTNAME $(date +%a-%d-%b-%y-%H:%M:%S)"; git push'
+alias gitt='git add *; git commit -a -m "$HOSTNAME $(date +%a-%d-%b-%y-%H:%M:%S)"'
 alias pushorg='cd ~/org;gittp;cd -'
 alias pullorg='cd ~/org;git pull;cd -'
 alias gitusermail="git config user.name \"mofrim\" && git config user.email \"mofrim@posteo.de\" "
@@ -53,11 +51,7 @@ alias timechecksuspend="date && systemctl suspend && sleep 5 && date"
 alias dudh="du -d1 -h"
 alias cpwd="pwd | wl-copy"
 alias man3="man 3"
-
-# Hardware related stuff
-alias cpuset_perf="sudo cpupower frequency-set -g performance"
-alias cpuset_powr="sudo cpupower frequency-set -g powersave"
-alias cpuset_infogov="cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
+alias ke="edit-in-kitty"
 
 #
 #      ____                 __  _

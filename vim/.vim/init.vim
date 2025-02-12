@@ -25,7 +25,6 @@ autocmd FileType c setlocal noexpandtab nu ru shiftwidth=4 tabstop=4
 
 "" theming
 set clipboard=unnamed
-" set clipboard=unnamed
 " let &t_ut=''
 " set t_Co=256
 let g:gruvbox_contrast_dark='hard'
@@ -112,7 +111,7 @@ let g:netrw_liststyle=3     " tree view
 " let g:netrw_list_hide=netrw_gitignore#Hide()
 " let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
-set shell=zsh
+set shell=bash
 set path+=**            " find sucht rekursiv ab aktuellen path
 set wildmenu
 set hidden              " allow buffer switching without saving
@@ -261,12 +260,6 @@ nnoremap <leader>bd :bdelete<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "
-" 42 header
-"
-let g:user42 = 'fmaurer'
-let g:mail42 = 'fmaurer42@gmail.com'
-
-"
 " fzf -- be praised!
 "
 map <leader>fb :Buffers<cr>
@@ -295,7 +288,7 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_folding_disabled=1
 
 "
-" NERDTree i. Allgem.
+" NERDTree
 "
 "" Openingn NerdTree when no file is specified
 autocmd StdinReadPre * let s:std_in=1
@@ -371,7 +364,6 @@ endfunction
 
 " asyncrun now has an option for opening quickfix automatically
 let g:asyncrun_open = 15
-
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
